@@ -1,6 +1,6 @@
 # DD Characters
 
-Multicharacter system for [Qbox](https://github.com/Qbox-project/qbx_core).
+Multicharacter system inspired from qbx_core multichar [Qbox](https://github.com/Qbox-project/qbx_core).
 
 <img width="1917" height="1079" alt="Screenshot 2026-07-04 125514" src="https://github.com/user-attachments/assets/f8d7c74e-077f-4a2c-8b19-a8d789597a4d" />
 
