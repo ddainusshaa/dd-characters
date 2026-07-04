@@ -2,7 +2,8 @@
 
 Multicharacter system for [Qbox](https://github.com/Qbox-project/qbx_core).
 
-**Author:** ddainusshaa
+<img width="1917" height="1079" alt="Screenshot 2026-07-04 125514" src="https://github.com/user-attachments/assets/f8d7c74e-077f-4a2c-8b19-a8d789597a4d" />
+
 
 ## Requirements
 
@@ -58,3 +59,10 @@ cd web
 bun install
 bun run build
 ```
+
+## More Preview
+<img width="1918" height="1079" alt="Screenshot 2026-07-04 125536" src="https://github.com/user-attachments/assets/11b4faac-0913-4b9e-afc3-45b4868fd5bb" />
+<img width="1919" height="1076" alt="Screenshot 2026-07-04 125526" src="https://github.com/user-attachments/assets/bf06b387-9ab5-4985-bd66-2eef3062a72e" />
+<img width="1917" height="1079" alt="Screenshot 2026-07-04 125514" src="https://github.com/user-attachments/assets/35f17287-6ddb-4c4d-9b49-cf9c216109e8" />
+<img width="1919" height="1079" alt="Screenshot 2026-07-04 125434" src="https://github.com/user-attachments/assets/2498784e-5dc1-4390-b8db-26575f1be080" />
+
