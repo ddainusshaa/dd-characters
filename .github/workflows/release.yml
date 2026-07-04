@@ -63,12 +63,12 @@ jobs:
           cd dist
           zip -r "dd-characters-v${VERSION}.zip" dd-characters
 
-      - name: Commit version bump and build
+      - name: Commit version bump
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add fxmanifest.lua web/build
+          git add fxmanifest.lua
           git commit -m "Release v${VERSION}"
 
       - name: Create tag and push
