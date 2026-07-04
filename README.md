@@ -51,12 +51,6 @@ dd-characters owns character listing, slot limits, and creation. It does not use
 | `data/codex.lua` | Codex content (enable in shared.lua) |
 | `data/pulse.lua` | Pulse feed content (enable in shared.lua) |
 
-## Commands
-
-| Command | Description |
-|---------|-------------|
-| `/ddchar` | Open character selection |
-
 ## Development
 
 ```bash

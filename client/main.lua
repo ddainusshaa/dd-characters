@@ -871,7 +871,3 @@ CreateThread(function()
 
     SetEntityInvincible(PlayerPedId(), false)
 end)
-
-RegisterCommand('ddchar', function()
-    chooseCharacter()
-end, false)
