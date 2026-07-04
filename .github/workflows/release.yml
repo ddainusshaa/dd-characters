@@ -53,23 +53,31 @@ jobs:
 
       - name: Package release
         run: |
-          RELEASE_DIR="dist/dd-characters"
+          RELEASE_ROOT="$RUNNER_TEMP/dd-characters-release"
+          RELEASE_DIR="$RELEASE_ROOT/dd-characters"
+          ZIP_PATH="$RUNNER_TEMP/dd-characters-v${VERSION}.zip"
           mkdir -p "$RELEASE_DIR/web"
 
           cp fxmanifest.lua LICENSE README.md "$RELEASE_DIR/"
           cp -r client server data locales "$RELEASE_DIR/"
           cp -r web/build "$RELEASE_DIR/web/"
 
-          cd dist
-          zip -r "dd-characters-v${VERSION}.zip" dd-characters
+          cd "$RELEASE_ROOT"
+          zip -r "$ZIP_PATH" dd-characters
+
+          echo "RELEASE_ZIP=$ZIP_PATH" >> "$GITHUB_ENV"
 
       - name: Commit version bump
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add fxmanifest.lua
-          git commit -m "Release v${VERSION}"
+          if git diff --quiet fxmanifest.lua; then
+            echo "fxmanifest.lua already at v${VERSION}; skipping commit"
+          else
+            git add fxmanifest.lua
+            git commit -m "Release v${VERSION}"
+          fi
 
       - name: Create tag and push
         run: |
@@ -82,6 +90,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "v${VERSION}" \
-            "dist/dd-characters-v${VERSION}.zip" \
+            "$RELEASE_ZIP" \
             --title "v${VERSION}" \
             --generate-notes
